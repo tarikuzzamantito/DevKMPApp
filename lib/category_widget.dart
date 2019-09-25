@@ -30,6 +30,7 @@ class Category extends StatelessWidget {
     }
     Navigator.of(context).push(MaterialPageRoute<Null>(
       builder: (BuildContext context) {
+        // Image.asset('food.jpg');
         return Scaffold(
           appBar: AppBar(
             elevation: 1.0,
@@ -40,10 +41,28 @@ class Category extends StatelessWidget {
             centerTitle: true,
             backgroundColor: color[100],
           ),
-          body: ConverterRoute(color: color, units: units),
+          body: ConverterRoute(
+            name: name,
+            color: color,
+            units: units,
+          ),
+          resizeToAvoidBottomPadding: false,
         );
       },
     ));
+  }
+
+  void _showBottomSheet(BuildContext context) {
+    final selectCategoryScreen = ConverterRoute(
+      name: name,
+      color: color,
+      units: units,
+    );
+    showModalBottomSheet<Null>(
+        context: context,
+        builder: (BuildContext context) {
+          return selectCategoryScreen;
+        });
   }
 
   @override
