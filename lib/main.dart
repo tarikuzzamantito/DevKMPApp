@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:udacity_flutter_app/category_widget.dart';
+import 'package:udacity_flutter_app/category_route.dart';
 
-const _categoryName = 'Cake';
-const _categoryIcon = Icons.android;
-const _categoryColor = Colors.green;
+//const _categoryName = 'Android Icon';
+//const _categoryIcon = Icons.android;
+//const _categoryColor = Colors.green;
 
 void main() => runApp(UnitConverterApp());
 
@@ -12,12 +12,8 @@ class UnitConverterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Udacity'),
-        ),
-        body: Category(name: _categoryName, color: _categoryColor, iconLocation: _categoryIcon,),
-      ),
+      home: CategoryRoute(),
+      title: 'Unit Converter',
     );
   }
 }
