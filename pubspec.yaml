@@ -1,5 +1,5 @@
 name: udacity_flutter_app
-description: A new Flutter application. Udacity Course Build Native Mobile Apps with Flutter. # https:&#x2F;&#x2F;classroom.udacity.com&#x2F;courses&#x2F;ud905
+description: Work in progress for a Unit Converter app. Udacity Course Build Native Mobile Apps with Flutter. # https:&#x2F;&#x2F;classroom.udacity.com&#x2F;courses&#x2F;ud905
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -39,6 +39,20 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/data/regular_units.json
+    - assets/icons/area.png
+    - assets/icons/currency.png
+    - assets/icons/digital_storage.png
+    - assets/icons/length.png
+    - assets/icons/mass.png
+    - assets/icons/power.png
+    - assets/icons/time.png
+    - assets/icons/volume.png
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
